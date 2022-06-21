@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gebnerate.barcode.controller.GenerateController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="600.0">
+            <children>
+                <RadioButton fx:id="EAN13" layoutX="39.0" layoutY="36.0" mnemonicParsing="false" text="EAN13">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="EAN8" layoutX="187.0" layoutY="36.0" mnemonicParsing="false" text="EAN8" toggleGroup="$group" />
+                <RadioButton fx:id="EAN128" layoutX="341.0" layoutY="36.0" mnemonicParsing="false" text="EAN128" toggleGroup="$group" />
+                <RadioButton fx:id="Code39" layoutX="469.0" layoutY="36.0" mnemonicParsing="false" text="Code39" toggleGroup="$group" />
+                <Label layoutX="230.0" layoutY="6.0" text="Выберите тип бар кода" />
+            </children>
+        </Pane>
+        <TextField fx:id="maskBarcode" layoutX="14.0" layoutY="116.0" onAction="#chekMaskBarcode" onKeyPressed="#changeTest" prefHeight="25.0" prefWidth="196.0" />
+        <Label layoutX="32.0" layoutY="90.0" text="Маска генерации баркода" />
+        <Label layoutX="41.0" layoutY="152.0" text="Результат генерации" />
+        <TextField fx:id="resultGenerationBarcode" layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="196.0" />
+        <ImageView fx:id="imgbar" fitHeight="150.0" fitWidth="450.0" layoutX="6.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="saveClipBoard" layoutX="327.0" layoutY="175.0" mnemonicParsing="false" onAction="#saveClipBoard" text="Сохранить в буфер" />
+        <Button fx:id="generateBracode" layoutX="327.0" layoutY="116.0" mnemonicParsing="false" onAction="#onClickGenBracode" prefHeight="25.0" prefWidth="122.0" text="Генерировать" />
+      <TextField fx:id="articul" layoutX="217.0" layoutY="175.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="217.0" layoutY="152.0" text="Артикул привязки" />
+      <Label fx:id="error" layoutX="203.0" layoutY="70.0" />
+    </children>
+</AnchorPane>

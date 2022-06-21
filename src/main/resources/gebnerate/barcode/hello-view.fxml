@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gebnerate.barcode.controller.MainController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" text="---" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExitApplication" text="Выход" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Баркоды">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuGenerate" text="Генерировать" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuViewReserv" text="Просмотреть зарезервированные" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuViewHistory" text="История" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Настройки">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onMenuConnectedBD" text="Подключение к бд" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Помощь">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onMenuAbout" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="E_RESIZE" />
+         </cursor>
+      </MenuBar>
+   </children>
+</AnchorPane>
